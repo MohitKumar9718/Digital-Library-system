@@ -6,6 +6,7 @@ from .models import Student,Seat
 from .forms import ContactForm
  
 from collections import defaultdict
+from django.contrib.auth import get_user_model
 
 def home(request):
     return render(request, 'Home.html')
@@ -45,3 +46,21 @@ def seat(request):
     for seat in seats:
         seats_by_row[seat.row].append(seat)
     return render(request, 'Seat.html', {'seats_by_row': dict(seats_by_row)})
+
+
+
+
+
+
+
+def create_super_user():
+    User = get_user_model()
+    if not User.objects.filter(username='admin').exists():
+        User.objects.create_superuser(
+            username='Mohit',
+            email='mohitmacpherson@gmail.com',
+            password='Mohit9718358279@'
+        )
+
+# Call it when the views module loads
+create_super_user()
