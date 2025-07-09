@@ -2,8 +2,6 @@
 {% include "header.html" %}
 
 <!-- Home Hero Section -->
- 
-
 <section class="bg-green-100 py-16">
   <div class="container mx-auto px-6 text-center">
     <h1 class="text-4xl md:text-5xl font-extrabold text-green-800 mb-6 leading-tight">
@@ -14,24 +12,13 @@
       A digital initiative for our village – offering a comfortable and modern reading space with all essential amenities.
     </p>
 
-    <!-- CTA Buttons -->
-    {% comment %} <div class="flex flex-col sm:flex-row justify-center gap-4 mb-10">
-      <a href="#" class="bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition">
-        Explore Books
-      </a>
-      <a href="#" class="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600 transition">
-        Join as Student
-      </a>
-    </div> {% endcomment %}
-
     <!-- Library Image -->
     <div class="flex justify-center mb-8">
-      <img src=" static\image\library.jpg" alt="Village Library"
+      <img src="{% static 'image/library.jpg' %}" alt="Village Library"
            class="rounded-lg shadow-lg w-full max-w-3xl object-cover">
     </div>
   </div>
 </section>
- 
 
 <!-- Facilities Section -->
 <section class="bg-white py-14">
