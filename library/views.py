@@ -53,14 +53,4 @@ def seat(request):
 
 
 
-def create_super_user():
-    User = get_user_model()
-    if not User.objects.filter(username='admin').exists():
-        User.objects.create_superuser(
-            username='Mohit',
-            email='mohitmacpherson@gmail.com',
-            password='Mohit9718358279@'
-        )
-
-# Call it when the views module loads
-create_super_user()
+ 
