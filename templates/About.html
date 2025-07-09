@@ -1,0 +1,69 @@
+{% load static %}
+{% include "header.html" %} 
+
+<!-- About Section -->
+ 
+
+<section class="bg-white py-16">
+  <div class="container mx-auto px-6">
+
+    <!-- Section Title -->
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold text-green-800 mb-3">About Gopal Digital Library</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Our mission is to empower the people of our village with access to books, knowledge, technology, and a calm learning environment.
+      </p>
+    </div>
+
+    <!-- Library Info Grid -->
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+
+      <!-- Library Image -->
+      <div>
+         <img src="{% static 'image/library_image.jpg' %}" alt="Library Inside View"
+         class="  shadow-lg object-cover mx-auto w-[350px] h-[430px] mb-3">
+     </div>
+
+
+
+
+    
+   
+      <div>
+        <h3 class="text-2xl font-semibold text-green-700 mb-4">Why Gopal Digital Library?</h3>
+        <ul class="list-disc pl-5 text-gray-700 mb-6 space-y-2 text-sm md:text-base">
+          <li>Air-conditioned reading hall with peaceful seating</li>
+          <li>Free Wi-Fi for students and job seekers</li>
+          <li>Academic and competitive exam Preparation</li>
+          <li>Matka  water & 24x7 </li>
+          <li>Safe and monitored environment with CCTV</li>
+        </ul>
+
+        <h4 class="text-lg font-semibold text-gray-800 mb-1">📍 Address</h4>
+        <p class="text-gray-600">
+          Gopal Digital Library,<br>
+          Bhawani patti, Rafiganj Jalalpur Road ,<br>
+          MAthurapur, Deeh Bhiyaon, Ambedkarnagar, Uttar Pradesh -224139
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Google Map Section -->
+    <div class="mt-14">
+      <h3 class="text-2xl font-semibold text-green-700 text-center mb-6">Find Us on Google Maps</h3>
+      <div class="flex justify-center">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1062.8742170941207!2d82.78603032561537!3d26.32526685288029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3990f9250bddd7cd%3A0x19a7c048e896acd7!2sBHAVANI%20PATTI%2C%20YADAV%20NAGRI!5e1!3m2!1sen!2sin!4v1751986507070!5m2!1sen!2sin" 
+          width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="rounded-lg shadow-lg w-full max-w-4xl">
+        </iframe>
+ 
+      
+    </div>
+
+  </div>
+</section>
+
+{% include "footer.html" %}

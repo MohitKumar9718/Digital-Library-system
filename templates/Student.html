@@ -1,0 +1,74 @@
+{% load static %}
+{% include "header.html" %}
+
+<!-- Students Section -->
+ 
+
+<section class="py-16 bg-gray-100 min-h-screen">
+  <div class="container mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold text-green-800 mb-3">Registered Students</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mb-6">
+        Search students by name from Gopal Digital Library.
+      </p>
+
+      <!-- Search Form -->
+      <form method="GET" class="flex justify-center gap-2 mb-6">
+        <input
+          type="text"
+          name="q"
+          placeholder="Enter student name"
+          value="{{ request.GET.q }}"
+          class="px-4 py-2 w-72 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:outline-none"
+        >
+        <button
+          type="submit"
+          class="bg-green-700 text-white px-4 py-2 rounded-lg hover:bg-green-800 transition"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+
+    <p class="text-center text-lg text-red-600 font-semibold">
+  Total students: {{ students|length }}
+</p>
+
+    <!-- Table -->
+    <div class="overflow-x-auto bg-white rounded-lg shadow-md">
+      <table class="min-w-full text-left text-sm table-auto">
+        <thead class="bg-green-700 text-white uppercase text-xs">
+          <tr>
+            <th class="py-3 px-4">#</th>
+            <th class="py-3 px-4">Name</th>
+            <th class="py-3 px-4">Mobile No</th>
+            <th class="py-3 px-4">Village</th>
+            <th class="py-3 px-4">Fee (₹)</th>
+            <th class="py-3 px-4">Joining Date</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700">
+          {% for student in students %}
+          <tr class="border-b hover:bg-green-50 transition">
+            <td class="py-3 px-4 font-medium">{{ forloop.counter }}</td>
+            <td class="py-3 px-4">{{ student.name }}</td>
+            <td class="py-3 px-4">{{ student.mobile_no }}</td>
+            <td class="py-3 px-4">{{ student.village_name }}</td>
+            <td class="py-3 px-4">{{ student.fee }}</td>
+            <td class="py-3 px-4">{{ student.joining_date }}</td>
+          </tr>
+          {% empty %}
+          <tr>
+            <td colspan="6" class="py-6 px-4 text-center text-gray-500">No students found.</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+{% include "footer.html" %}

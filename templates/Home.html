@@ -1,0 +1,88 @@
+{% load static %}
+{% include "header.html" %}
+
+<!-- Home Hero Section -->
+ 
+
+<section class="bg-green-100 py-16">
+  <div class="container mx-auto px-6 text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-green-800 mb-6 leading-tight">
+      Welcome to <br />
+      <span class="text-yellow-600">Gopal Digital Library</span>
+    </h1>
+    <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+      A digital initiative for our village – offering a comfortable and modern reading space with all essential amenities.
+    </p>
+
+    <!-- CTA Buttons -->
+    {% comment %} <div class="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+      <a href="#" class="bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition">
+        Explore Books
+      </a>
+      <a href="#" class="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600 transition">
+        Join as Student
+      </a>
+    </div> {% endcomment %}
+
+    <!-- Library Image -->
+    <div class="flex justify-center mb-8">
+      <img src=" static\image\library.jpg" alt="Village Library"
+           class="rounded-lg shadow-lg w-full max-w-3xl object-cover">
+    </div>
+  </div>
+</section>
+ 
+
+<!-- Facilities Section -->
+<section class="bg-white py-14">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center text-green-800 mb-10">Facilities at Gopal Digital Library</h2>
+    <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 text-center">
+
+      <!-- Books -->
+      <div class="p-6 bg-green-50 rounded-lg shadow hover:shadow-md transition">
+        <img src="{% static 'image/book_image.jpg' %}" alt="Books" class="mx-auto w-[350px] h-[250px] rounded mb-3">
+        <h4 class="text-lg font-semibold text-green-700">Wide Range of Books</h4>
+        <p class="text-sm text-gray-600 mt-2">Explore academic, competitive, and general knowledge books.</p>
+      </div>
+
+      <!-- AC Seating -->
+      <div class="p-6 bg-green-50 rounded-lg shadow hover:shadow-md transition">
+        <img src="{% static 'image/ac_room_image.jpg' %}" alt="AC Seating" class="mx-auto w-[350px] h-[250px] rounded mb-3">
+        <h4 class="text-lg font-semibold text-green-700">A/C Comfortable Seats</h4>
+        <p class="text-sm text-gray-600 mt-2">Study in a peaceful, air-conditioned environment.</p>
+      </div>
+
+      <!-- WiFi -->
+      <div class="p-6 bg-green-50 rounded-lg shadow hover:shadow-md transition">
+        <img src="{% static 'image/wifi_image.jpg' %}" alt="WiFi" class="mx-auto w-[350px] h-[250px] rounded mb-3">
+        <h4 class="text-lg font-semibold text-green-700">Free Wi-Fi Access</h4>
+        <p class="text-sm text-gray-600 mt-2">Stay connected while you study or research.</p>
+      </div>
+
+      <!-- Water -->
+      <div class="p-6 bg-green-50 rounded-lg shadow hover:shadow-md transition">
+        <img src="{% static 'image/water_image.jpg' %}" alt="Water Facility" class="mx-auto w-[350px] h-[250px] rounded mb-3">
+        <h4 class="text-lg font-semibold text-green-700">Clean Drinking Water</h4>
+        <p class="text-sm text-gray-600 mt-2">Stay hydrated with our RO-filtered water facility.</p>
+      </div>
+
+      <!-- Electricity -->
+      <div class="p-6 bg-green-50 rounded-lg shadow hover:shadow-md transition">
+        <img src="{% static 'image/light_image.webp' %}" alt="Electricity" class="mx-auto w-[350px] h-[250px] rounded mb-3">
+        <h4 class="text-lg font-semibold text-green-700">24x7 Electricity Backup</h4>
+        <p class="text-sm text-gray-600 mt-2">Uninterrupted reading with inverter and generator backup.</p>
+      </div>
+
+      <!-- CCTV -->
+      <div class="p-6 bg-green-50 rounded-lg shadow hover:shadow-md transition">
+        <img src="{% static 'image/cctv_image.webp' %}" alt="CCTV" class="mx-auto w-[350px] h-[250px] rounded mb-3">
+        <h4 class="text-lg font-semibold text-green-700">CCTV Surveillance</h4>
+        <p class="text-sm text-gray-600 mt-2">Ensuring a secure and safe environment for all visitors.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% include "footer.html" %}

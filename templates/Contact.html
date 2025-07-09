@@ -1,0 +1,92 @@
+{% load static %}
+{% include "header.html" %}
+
+<!-- Contact Section -->
+ 
+
+<section class="bg-white py-16">
+  <div class="container mx-auto px-6 lg:px-12">
+
+    <!-- Section Header -->
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold text-green-800 mb-2">Contact Us</h2>
+      <p class="text-gray-600">We’d love to hear from you! Get in touch with us for any questions or suggestions.</p>
+    </div>
+
+    <!-- Contact Info + Form -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+
+      <!-- Contact Info -->
+      <div class="space-y-6">
+        <div class="flex items-start gap-4">
+          <span class="text-green-700 text-2xl"><i class="fas fa-map-marker-alt"></i></span>
+          <div>
+            <h4 class="font-semibold text-lg">Address</h4>
+            <p class="text-gray-600">Gopal Digital Library, Rafiganj Jalalpur Main Road,<br>Mathurapur Village, Ambedkarnagar, Uttra Pradesh - 224139</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <span class="text-green-700 text-2xl"><i class="fas fa-phone-alt"></i></span>
+          <div>
+            <h4 class="font-semibold text-lg">Phone</h4>
+            <p class="text-gray-600">+91 9876543210</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <span class="text-green-700 text-2xl"><i class="fas fa-envelope"></i></span>
+          <div>
+            <h4 class="font-semibold text-lg">Email</h4>
+            <p class="text-gray-600">contact@gopalibrary.org</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <span class="text-green-700 text-2xl"><i class="fas fa-clock"></i></span>
+          <div>
+            <h4 class="font-semibold text-lg">Library Hours</h4>
+            <p class="text-gray-600">Mon - Sat: 9:00 AM - 6:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <form method="POST" class="space-y-6 bg-gray-100 p-6 rounded-lg shadow">
+        {% csrf_token %}
+        <div>
+          <label class="block text-sm font-medium mb-1 text-gray-700">Your Name</label>
+          <input type="text" name="name" required class="w-full border-gray-300 rounded px-4 py-2 focus:ring-green-500 focus:border-green-500">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1 text-gray-700">Your Email</label>
+          <input type="email" name="email" required class="w-full border-gray-300 rounded px-4 py-2 focus:ring-green-500 focus:border-green-500">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1 text-gray-700">Message</label>
+          <textarea name="message" rows="4" required class="w-full border-gray-300 rounded px-4 py-2 focus:ring-green-500 focus:border-green-500"></textarea>
+        </div>
+        <div>
+          <button type="submit" class="bg-green-700 text-white px-6 py-2 rounded hover:bg-green-800 transition">Send Message</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Google Map -->
+    <div class="mt-16">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1062.8742170941207!2d82.78603032561537!3d26.32526685288029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3990f9250bddd7cd%3A0x19a7c048e896acd7!2sBHAVANI%20PATTI%2C%20YADAV%20NAGRI!5e1!3m2!1sen!2sin!4v1751986507070!5m2!1sen!2sin" 
+        width="100%" 
+        height="400" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        class="rounded-lg shadow-lg">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+{% include "footer.html" %}

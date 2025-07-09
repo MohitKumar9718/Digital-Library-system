@@ -1,0 +1,39 @@
+{% load static %}
+{% include "header.html" %}
+
+<!-- Seat Detail Section -->
+ 
+
+<section class="bg-gray-100 py-16 min-h-screen">
+  <div class="container mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold text-green-800 mb-4">Library Seat Details</h2>
+      <p class="text-gray-600">Current occupancy status of seats in Gopal Digital Library</p>
+    </div>
+
+    <!-- Seat Grid -->
+    {% for row, seats in seats_by_row.items %}
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold text-green-700 mb-2">Row {{ row }}</h3>
+        <div class="flex flex-wrap gap-3">
+          {% for seat in seats %}
+            <div class="w-16 h-16 flex items-center justify-center rounded-md text-white font-bold 
+                        {% if seat.is_occupied %}
+                          bg-red-600
+                        {% else %}
+                          bg-green-500
+                        {% endif %}">
+              {{ seat.seat_number }}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% empty %}
+      <p class="text-center text-gray-500">No seat data available.</p>
+    {% endfor %}
+  </div>
+</section>
+
+{% include "footer.html" %}

@@ -1,0 +1,30 @@
+# Python bytecode
+*.pyc
+__pycache__/
+
+# SQLite database
+db.sqlite3
+
+# Media files
+/media/
+
+# Static files collected
+staticfiles/
+
+# Logs
+*.log
+
+# Environment files (for secrets)
+.env
+.env.*
+
+# Virtual environment folder
+venv/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# IDE folders
+.vscode/
+.idea/

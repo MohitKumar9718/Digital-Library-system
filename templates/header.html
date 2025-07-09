@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Village Library</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="bg-gray-50">
+
+  <!-- Navbar -->
+  <header class="bg-green-700 shadow-lg">
+    <div class="container mx-auto flex items-center justify-between py-4 px-6">
+      
+      <!-- Logo and Title -->
+      <div class="flex items-center space-x-3">
+        <!-- <img src="https://cdn-icons-png.flaticon.com/512/2857/2857393.png" alt="Library Logo" class="h-10 w-10"> -->
+        <span class="text-white text-2xl font-bold">Gopal Digital Library</span>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="{% url "home" %}" class="text-white hover:text-yellow-300 transition duration-200">Home</a>
+        <a href="{% url "about" %}" class="text-white hover:text-yellow-300 transition duration-200">About</a>
+        <a href="{% url "student" %}" class="text-white hover:text-yellow-300 transition duration-200">Students</a>
+        <a href="{% url "seat" %}" class="text-white hover:text-yellow-300 transition duration-200">Seat Detail</a>
+        <a href="{% url "contact" %}" class="text-white hover:text-yellow-300 transition duration-200">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Icon -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor"
+               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16">
+            </path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+      <a href="{% url "home" %}" class="block text-white py-2 hover:text-yellow-300">Home</a>
+      <a href="{% url "about" %}" class="block text-white py-2 hover:text-yellow-300">About</a>
+      <a href="{% url "student" %}" class="block text-white py-2 hover:text-yellow-300">Students</a>
+      <a href="{% url "seat" %}" class="block text-white py-2 hover:text-yellow-300">Seat Detail</a>
+      <a href="{% url "contact" %}" class="block text-white py-2 hover:text-yellow-300">Contact</a>
+    </div>
+  </header>
+
+  <!-- Toggle Script -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
