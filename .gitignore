@@ -28,3 +28,4 @@ Thumbs.db
 # IDE folders
 .vscode/
 .idea/
+"db.sqlite3" 
